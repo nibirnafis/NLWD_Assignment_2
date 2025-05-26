@@ -54,3 +54,66 @@ NO | CHAR | VARCHAR
  ১ | সীমিত আকারের ডাটা এর জন্য ব্যাবহার উপযোগী | বিভিন্ন আকারের ডাটা এর জন্য ব্যাবহার উপযোগী
  ২ | নির্ধারিত করে দাওয়া লেংথ এর পুরটি ব্যাবহার করে | যতটুকু প্রয়োজন ততটুকু ব্যাবহার করে
  ৩ | কর্মক্ষমতা বেশি | নমনীয়তা বেশি
+
+
+<br>
+
+ ## QUESTION: 5 Explain the purpose of the WHERE clause in a SELECT statement.
+
+ ### Answer:
+
+ WHERE ক্লস কোন টেবিল এর রো গুলকে ফিল্টার করার জন্য ব্যাবহার করা হয়। SELECT ব্যাবহার করে কোন টেবিল রো 
+ গুলকে এক্সেস করার সময় যখন কিছু নির্দিষ্ট রো এর প্রয়োজন হয় তখন কন্ডিশন এপ্লাই করার জন্য WHERE ক্লস ব্যাবহার করা হয়। 
+
+## উদাহরনঃ
+
+ ### PRODUCTS TABLE
+ Product_id | Product_name | Product_Price
+ --- | --- | --- 
+ 1 | Coffee | 100
+ 2 | Tea | 50
+ 3 | Milk | 30
+
+
+**SQL Syntax:**<br>
+ SELECT * FROM PRODUCTS<br>
+ WHERE Product_Price > 40
+
+
+ **OUTPUT:**
+ Product_id | Product_name | Product_Price
+ --- | --- | --- 
+ 1 | Coffee | 100
+ 2 | Tea | 50
+
+
+ <br>
+
+ ## QUESTION: 7 How can you modify data using UPDATE statements?
+
+ ### Answer:
+
+UPDATE ব্যাবহার করে এক্সিস্টিং কোন টেবিল এর ডাটা আপডেট করা হয়ে থাকে। নিচে এর ব্যাবহার দেখান হলঃ
+
+### DEVICES TABLE(Before Update)
+ Device_id | Device_name | Device_Price
+ --- | --- | --- 
+ 1 | Mobile | 20000
+ 2 | Laptop | 80000
+ 3 | Desktop | 60000
+ 
+
+**SQL Syntax:**
+<br>
+UPDATE DEVICES<br>
+SET Device_Price = 30000<br>
+WHERE Device_name = 'Mobile'
+
+UPDATE ব্যাবহার এর ফলে এখন DEVICES TABLE টি এরকম হবেঃ
+
+### DEVICES TABLE(After Update)
+ Device_id | Device_name | Device_Price
+ --- | --- | --- 
+ 1 | Mobile | 30000
+ 2 | Laptop | 80000
+ 3 | Desktop | 60000

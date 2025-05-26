@@ -117,3 +117,46 @@ UPDATE ব্যাবহার এর ফলে এখন DEVICES TABLE টি 
  1 | Mobile | 30000
  2 | Laptop | 80000
  3 | Desktop | 60000
+
+
+
+<br>
+
+ ## QUESTION: 8 What is the significance of the JOIN operation, and how does it work in PostgreSQL?
+
+ ### Answer:
+
+ JOIN অপারেশান PostgreSQL এর খুবই গুরুত্বপূর্ণ একটি টপিক। ডাটাবেস এর টেবিল এর রো গুলর মধ্যে সম্পর্ক স্থাপন এর মাধ্যমে বিভিন্ন ধরনের অপারেশান করা হয় JOIN ব্যাবহার করার মাধ্যমে। বিভিন্ন ধরনের JOIN হয়ে থাকে। যেমনঃ 
+ - INNER JOIN
+ - LEFT JOIN
+ - RIGHT JOIN
+ - FULL JOIN 
+ - CROSS JOIN
+
+## উদাহারনঃ
+
+ JOIN ব্যাবহার করে এক টেবিল থেকে অন্য টেবিল এর ডাটা রিট্রাইভ অথবা মোডিফাই করা যায়। যেমনঃ
+
+ ### USERS TABLE
+ User_id | User_name
+ --- | ---
+ 1 | Fahim 
+ 2 | Shawon
+ 3 | Nibir
+
+
+ ### ORDERS TABLE
+ Order_id | Product_id | User_id
+ --- | --- | --- 
+ 1 | 2 | 2
+ 2 | 1 | 1
+ 3 | 3 | 2
+
+
+ **SQL Syntax:**
+<br>
+SELECT User_name FROM ORDERS
+INNER JOIN USER ON USER.User_id = ORDER.User_id
+
+
+এভাবে JOIN ব্যাবহার এর মাধ্যমে এক টেবিল এর থেকে অন্যান্য টেবিল এর রিলেটেড ডাটা গুলো রিট্রাইভ অথবা মোডিফাই করা যায়।

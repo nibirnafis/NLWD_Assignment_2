@@ -155,8 +155,15 @@ UPDATE ব্যাবহার এর ফলে এখন DEVICES TABLE টি 
 
  **SQL Syntax:**
 <br>
-SELECT User_name FROM ORDERS
+SELECT User_name FROM ORDERS<br>
 INNER JOIN USER ON USER.User_id = ORDER.User_id
 
+
+ **OUTPUT:**
+| User_name |
+| --- |
+| Fahim |
+| Shawon |
+| Nibir |
 
 এভাবে JOIN ব্যাবহার এর মাধ্যমে এক টেবিল এর থেকে অন্যান্য টেবিল এর রিলেটেড ডাটা গুলো রিট্রাইভ অথবা মোডিফাই করা যায়।
